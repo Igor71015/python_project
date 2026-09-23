@@ -1,4 +1,5 @@
 def get_mask_card_number(card_number: str) -> str:
+    """Маскирует номер карты."""
 
     card_number = card_number.replace(" ", "")
 
