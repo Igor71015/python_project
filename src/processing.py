@@ -1,7 +1,9 @@
 from typing import Any, Dict, List
 
 
-def filter_by_state(data: List[Dict[str, Any]], state: str = "EXECUTED") -> List[Dict[str, Any]]:
+def filter_by_state(
+    data: List[Dict[str, Any]], state: str = "EXECUTED"
+) -> List[Dict[str, Any]]:
     """Фильтрует список словарей по значению ключа 'state'.
 
     :param data: Исходный список словарей с данными об операциях.
@@ -15,7 +17,9 @@ def filter_by_state(data: List[Dict[str, Any]], state: str = "EXECUTED") -> List
     return filtered_list
 
 
-def sort_by_date(data: List[Dict[str, Any]], reverse: bool = True) -> List[Dict[str, Any]]:
+def sort_by_date(
+    data: List[Dict[str, Any]], reverse: bool = True
+) -> List[Dict[str, Any]]:
     """Сортирует список словарей по дате операции.
 
     :param data: Исходный список словарей с данными об операциях.
