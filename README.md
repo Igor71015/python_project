@@ -32,3 +32,4 @@ usd_transactions = filter_by_currency(transactions, "USD")
 for card in card_number_generator(1, 5):
     print(card)
 ```
+Автор проекта: Игорь Андреев.
