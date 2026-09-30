@@ -62,3 +62,4 @@ def test_card_number_generator(start: int, stop: int, expected: List[str]) -> No
     """Параметризованный тест генератора номеров карт."""
     result = list(card_number_generator(start, stop))
     assert result == expected
+# Финальная проверка
