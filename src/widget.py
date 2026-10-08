@@ -2,7 +2,9 @@ from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(info: str) -> str:
-    """Принимает строку с типом и номером карты/счета и возвращает строку с маскированным номером."""
+    """Принимает строку с типом и номером карты/счета
+    и возвращает строку с маскированным номером.
+    """
 
     parts = info.split()
 
