@@ -1,5 +1,6 @@
 from typing import Any
 from unittest.mock import patch
+
 from src.external_api import convert_to_rub
 
 
