@@ -44,10 +44,7 @@ def format_transaction_output(transaction: dict) -> str:
 
 def main() -> None:
     """Основная логика программы для взаимодействия с пользователем."""
-    print(
-        "Привет! Добро пожаловать в программу работы "
-        "с банковскими транзакциями."
-    )
+    print("Привет! Добро пожаловать в программу работы с банковскими транзакциями.")
     print("Выберите необходимый пункт меню:")
     print("1. Получить информацию о транзакциях из JSON-файла")
     print("2. Получить информацию о транзакциях из CSV-файла")
@@ -78,21 +75,13 @@ def main() -> None:
 
     available_statuses = {"EXECUTED", "CANCELED", "PENDING"}
     while True:
-        print(
-            "\nПрограмма: Введите статус, по которому "
-            "необходимо выполнить фильтрацию."
-        )
-        print(
-            "Доступные для фильтровки статусы: EXECUTED, CANCELED, PENDING"
-        )
+        print("\nПрограмма: Введите статус, по которому необходимо выполнить фильтрацию.")
+        print("Доступные для фильтровки статусы: EXECUTED, CANCELED, PENDING")
         status_input = input("Пользователь: ").strip().upper()
 
         if status_input in available_statuses:
             transactions = filter_by_state(transactions, status_input)
-            print(
-                f'\nПрограмма: Операции отфильтрованы '
-                f'по статусу "{status_input}"'
-            )
+            print(f'\nПрограмма: Операции отфильтрованы по статусу "{status_input}"')
             break
         else:
             print(f'\nПрограмма: Статус операции "{status_input}" недоступен.')
@@ -110,10 +99,7 @@ def main() -> None:
     if rub_choice in ["да", "yes"]:
         transactions = list(filter_by_currency(transactions, "RUB"))
 
-    print(
-        "\nПрограмма: Отfilter_by_currency список транзакций "
-        "по определенному слову в описании? Да/Нет"
-    )
+    print("\nПрограмма: Отфильтровать список транзакций по определенному слову в описании? Да/Нет")
     search_choice = input("Пользователь: ").strip().lower()
     if search_choice in ["да", "yes"]:
         print("\nПрограмма: Введите слово для поиска:")
@@ -122,10 +108,7 @@ def main() -> None:
 
     print("\nПрограмма: Распечатываю итоговый список транзакций...")
     if not transactions:
-        print(
-            "\nПрограмма: Не найдено ни одной транзакции, "
-            "подходящей под ваши условия фильтрации"
-        )
+        print("\nПрограмма: Не найдено ни одной транзакции, подходящей под ваши условия фильтрации")
         return
 
     print(f"\nВсего банковских операций в выборке: {len(transactions)}\n")
